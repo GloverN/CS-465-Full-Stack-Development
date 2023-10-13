@@ -66,7 +66,7 @@
       <input type="text" formControlName="perPerson"
         placeholder="PerPerson" class="form-control"
         [ngClass]="{ 'is-invalid': submitted && f.perPerson.errors }">
-        <div *ngIf="submitted && f.prPerson.errors">
+        <div *ngIf="submitted && f.perPerson.errors">
           <div *ngIf="f.perPerson.errors.required">
             Trip per person cost is required
           </div>
