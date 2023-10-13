@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 // import { trips } from '../data/trips';
 import { TripDataService } from '../../../services/trip-data.service';
+import { AuthenticationService } from '../../../services/authentication.service';
 import { Trip } from '../../../models/trip';
 
 @Component({
@@ -18,8 +19,13 @@ export class TripListingComponent implements OnInit {
 
   constructor(
     private tripDataService: TripDataService,
+    private authenticationService: AuthenticationService,
     private router: Router
-    ) { }
+  ) { }
+
+  public isLoggedIn(): boolean {
+    return this.authenticationService.isLoggedIn();
+  }
   
   private addTrip(): void {
     console.log('Inside TripListingComponent#addTrip');

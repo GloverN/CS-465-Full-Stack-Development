@@ -2,7 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-router.module';
 
 // Components
@@ -14,6 +14,9 @@ import { EditTripComponent } from './edit-trip/edit-trip.component';
 
 // Services
 import { TripDataService } from '../../services/trip-data.service';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,11 +24,15 @@ import { TripDataService } from '../../services/trip-data.service';
     TripListingComponent,
     TripCardComponent,
     AddTripComponent,
-    EditTripComponent
+    EditTripComponent,
+    NavbarComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
+    FormsModule,
     ReactiveFormsModule,
     AppRoutingModule
   ],
